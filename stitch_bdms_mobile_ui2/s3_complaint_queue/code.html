@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#68dba9", "on-secondary-container": "#007353", "surface-tint": "#006c4a", "surface-container": "#efecf8", "inverse-on-surface": "#f1effa", "on-primary-fixed": "#002114", "on-surface-variant": "#3d4a42", "on-background": "#1a1b23", "on-tertiary-container": "#f5fff7", "inverse-surface": "#2f3038", "tertiary": "#3f6353", "error-container": "#ffdad6", "outline-variant": "#bccac0", "surface-variant": "#e3e1ec", "on-surface": "#1a1b23", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002115", "on-tertiary-fixed-variant": "#294e3f", "on-tertiary": "#ffffff", "secondary": "#006c4e", "tertiary-fixed-dim": "#a8cfbc", "tertiary-container": "#577c6b", "background": "#fbf8ff", "primary-fixed-dim": "#68dba9", "primary-fixed": "#85f8c4", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#00513a", "surface-container-high": "#e9e7f2", "surface-dim": "#dad9e4", "on-primary-container": "#f5fff7", "on-error-container": "#93000a", "secondary-fixed": "#97f5cc", "surface-bright": "#fbf8ff", "on-secondary": "#ffffff", "surface-container-highest": "#e3e1ec", "primary-container": "#00855d", "tertiary-fixed": "#c3ecd7", "on-primary-fixed-variant": "#005137", "on-error": "#ffffff", "on-secondary-fixed": "#002115", "surface-container-low": "#f4f2fd", "error": "#ba1a1a", "outline": "#6d7a72", "surface": "#fbf8ff", "secondary-container": "#97f5cc", "secondary-fixed-dim": "#7bd8b1", "primary": "#006948" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-xl": "1.5rem", "gutter": "1rem" }, fontFamily: { "headline-md": ["Public Sans"], "headline-lg": ["Public Sans"], "label-lg": ["Public Sans"], "label-sm": ["Public Sans"], "label-md": ["Public Sans"], "display-lg": ["Public Sans"], "headline-sm": ["Public Sans"], "body-md": ["Public Sans"], "body-sm": ["Public Sans"], "body-lg": ["Public Sans"] }, fontSize: { "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "500" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>body { min-height: max(884px, 100dvh); }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">BDMS Back-Office</span><span class="inline-flex items-center px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold">STAFF</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">Dashboard</h1></div></div><div class="flex items-center gap-1"><button aria-label="Search Cases &amp; Records" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Interactive Navigation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'complaints') {
+          link.classList.add('text-primary', 'font-bold');
+          link.classList.remove('text-on-surface-variant');
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        } else {
+          link.classList.remove('text-primary', 'font-bold');
+          link.classList.add('text-on-surface-variant');
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+        }
+      });
+    });
+  </script>
+<!-- Sticky Sub-Header: Search & Queue Controls -->
+<div class="sticky top-16 z-40 bg-surface/95 backdrop-blur-md px-margin py- space-y-space-sm shadow-sm">
+<!-- Queue Title & Live Pulse -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Docket &amp; Complaints</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+          2 Overdue
+        </span>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+        Filter
+      </button>
+</div>
+<!-- Quick Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<input class="w-full h-11 pl-9 pr-8 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none shadow-sm focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search docket #, complainant, purok..." type="search"/>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center text-outline">
+<span class="material-symbols-outlined text-[16px]">keyboard_voice</span>
+</div>
+</div>
+<!-- SLA Sort Indicator Strip -->
+<div class="flex items-center justify-between py-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-error">swap_vertical_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Priority View: SLA Breach First</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">6 Total Enqueued</span>
+</div>
+<!-- Filter Pills Row -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin px-margin scrollbar-none">
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+        All Cases <span class="bg-primary-container px-1.5 py-0.2 rounded-full text-[10px]">6</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        Overdue <span class="font-bold">2</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+        Mediation <span class="font-semibold text-outline">3</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+        Hearing Set <span class="font-semibold text-outline">1</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+        Resolved
+      </button>
+</div>
+</div>
+<!-- Main Complaints Card Queue -->
+<div class="px-margin pt-space-md space-y-space-md">
+<!-- Case 1: Overdue #1 (Urgent SLA Breach) -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- High Priority Red Left Edge Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="pl-4 pr-3.5 py-3.5 flex flex-col gap-2.5">
+<!-- Card Top Bar: Monospace Docket + Category + Overdue Badge -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-mono text-label-sm text-outline tracking-wider uppercase font-semibold">CASE-2024-089</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-tertiary">recycling</span>
+                Sanitation · Illegal Dumping
+              </span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-outline font-medium">Purok 2</span>
+</div>
+</div>
+<!-- Overdue Badge -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold tracking-tight shrink-0">
+<span class="material-symbols-outlined text-[12px] text-error">warning</span>
+            OVERDUE · 48h
+          </span>
+</div>
+<!-- Issue Summary -->
+<div>
+<h3 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">
+            Continuous illegal dumping near creek spillway
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+            Piles of municipal garbage and debris left nightly, threatening drainage overflow before expected rains.
+          </p>
+</div>
+<!-- Complainant vs Respondent Mini-Grid -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1 text-label-sm font-label-sm">
+<div class="flex items-center justify-between">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span> Complainant:
+            </span>
+<span class="font-semibold text-on-surface">Elena Ramos</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person_alert</span> Respondent:
+            </span>
+<span class="font-semibold text-error">Unidentified Tricycle Operators</span>
+</div>
+</div>
+<!-- SLA Status Line & Submission Age -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline">
+<div class="flex items-center gap-1 text-error font-medium">
+<span class="material-symbols-outlined text-[14px]">hourglass_bottom</span>
+            Day 5 · Awaiting Tanod Assignment
+          </div>
+<span>5 days ago</span>
+</div>
+<!-- Row Action Bar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+            Assign Officer
+          </button>
+<button class="h-10 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Case 2: Overdue #2 (24h SLA Warning) -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- High Priority Red Left Edge Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="pl-4 pr-3.5 py-3.5 flex flex-col gap-2.5">
+<!-- Card Top Bar -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-mono text-label-sm text-outline tracking-wider uppercase font-semibold">CASE-2024-082</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-tertiary">volume_up</span>
+                Noise Disturbance
+              </span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-outline font-medium">Purok 5</span>
+</div>
+</div>
+<!-- Overdue Badge -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold tracking-tight shrink-0">
+<span class="material-symbols-outlined text-[12px] text-error">notification_important</span>
+            OVERDUE · Day 3
+          </span>
+</div>
+<!-- Issue Summary -->
+<div>
+<h3 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">
+            Late-night commercial videoke exceeding 10 PM curfew
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+            Repeated resident distress; sound system operated past midnight directly adjacent to senior residences.
+          </p>
+</div>
+<!-- Parties Information -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1 text-label-sm font-label-sm">
+<div class="flex items-center justify-between">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span> Complainant:
+            </span>
+<span class="font-semibold text-on-surface">Rodolfo Cruz</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">store</span> Respondent:
+            </span>
+<span class="font-semibold text-on-surface">Aling Tess Resto-Bar</span>
+</div>
+</div>
+<!-- SLA Line -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline">
+<div class="flex items-center gap-1 text-error font-medium">
+<span class="material-symbols-outlined text-[14px]">history</span>
+            1st Citation Unacknowledged
+          </div>
+<span>3 days ago</span>
+</div>
+<!-- Row Action Bar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+            Issue 2nd Notice
+          </button>
+<button class="h-10 px-3.5 rounded-lg bg-error-container hover:bg-error/20 text-on-error-container font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+            Escalate
+          </button>
+</div>
+</div>
+</div>
+<!-- Section Separator: Standard Active Queue -->
+<div class="flex items-center gap-2 pt-2 pb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Active Mediation &amp; Field Validation</span>
+<div class="flex-1 h-0.5 bg-surface-container"></div>
+</div>
+<!-- Case 3: Mediation In Progress (No Red Bar, Clean Blue Status) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-3.5 flex flex-col gap-2.5">
+<!-- Card Top Bar -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-mono text-label-sm text-outline tracking-wider uppercase font-semibold">CASE-2024-094</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-primary">fence</span>
+              Boundary &amp; Property Dispute
+            </span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-outline font-medium">Purok 3</span>
+</div>
+</div>
+<!-- Status Badge: Blue (Mediation) -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold shrink-0">
+<span class="material-symbols-outlined text-[12px]">balance</span>
+          Mediation Set
+        </span>
+</div>
+<!-- Title / Grievance -->
+<div>
+<h3 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">
+          Fence encroachment along right-of-way easement
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+          Concrete fence expansion restricts passage for emergency response trikes.
+        </p>
+</div>
+<!-- Parties and Hearing Schedule Pill -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1.5 text-label-sm font-label-sm">
+<div class="flex items-center justify-between">
+<span class="text-outline">Complainant:</span>
+<span class="font-semibold text-on-surface">Marietta Santos</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Respondent:</span>
+<span class="font-semibold text-on-surface">Brgy. Kagawad R. Dizon</span>
+</div>
+<div class="mt-1 pt-1.5 flex items-center justify-between border-t border-surface-container">
+<span class="text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event</span>
+            Oct 26, 2:00 PM
+          </span>
+<span class="text-outline">Hall B (Lupon Session)</span>
+</div>
+</div>
+<!-- Row Action Bar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+          View Docket &amp; Notes
+        </button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span>
+          Summons
+        </button>
+</div>
+</div>
+<!-- Case 4: Field Tanod Dispatched (Cyan Status) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-3.5 flex flex-col gap-2.5">
+<!-- Card Top Bar -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-mono text-label-sm text-outline tracking-wider uppercase font-semibold">CASE-2024-097</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-tertiary">bolt</span>
+              Public Safety / Hazard
+            </span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-outline font-medium">Purok 1</span>
+</div>
+</div>
+<!-- Status Badge: Cyan (Tanod Field Dispatched) -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-[10px] font-bold shrink-0">
+<span class="material-symbols-outlined text-[12px]">security</span>
+          Tanod Dispatched
+        </span>
+</div>
+<!-- Issue Summary -->
+<div>
+<h3 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">
+          Damaged electric pole wire sparking near sari-sari store
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+          Reported live wire hanging 6 feet above pathway during rainy spells.
+        </p>
+</div>
+<!-- Parties Breakdown -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1 text-label-sm font-label-sm">
+<div class="flex items-center justify-between">
+<span class="text-outline">Complainant:</span>
+<span class="font-semibold text-on-surface">Danilo Bautista</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Assigned Tanod:</span>
+<span class="font-semibold text-secondary">Officer B. Alcantara</span>
+</div>
+</div>
+<!-- Timestamp -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline">
+<span>Ocular Inspection in Progress</span>
+<span>Today, 9:45 AM</span>
+</div>
+<!-- Row Action Bar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+          Inspection Report
+        </button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">call</span>
+          Radio
+        </button>
+</div>
+</div>
+<!-- Quick Intake Floating FAB Row -->
+<div class="pt-2 flex items-center justify-center">
+<button class="w-full h-12 rounded-xl bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+        Log New Blotter / Grievance
+      </button>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold"><div class="grid grid-cols-5 items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-[11px] leading-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="complaints" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-label-sm text-[11px] leading-tight">Complaints</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="emergency" href="#"><span class="material-symbols-outlined text-[22px]">e911_emergency</span><span class="font-label-sm text-[11px] leading-tight">Emergency</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="announcements" href="#"><span class="material-symbols-outlined text-[22px]">campaign</span><span class="font-label-sm text-[11px] leading-tight">Broadcasts</span></a><a class="flex flex-col items-center justify-center gap-0.5 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="more" href="#"><span class="material-symbols-outlined text-[22px]">more_horiz</span><span class="font-label-sm text-[11px] leading-tight">More</span></a></div></nav></body></html>

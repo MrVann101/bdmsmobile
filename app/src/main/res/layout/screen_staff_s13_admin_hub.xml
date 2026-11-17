@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface">
+
+    <!-- Fixed Header Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        app:elevation="2dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BDMS ADMIN" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Admin Hub" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@android:drawable/ic_menu_agenda" app:tint="@color/colorTextPrimary" android:contentDescription="Alerts" android:background="?attr/selectableItemBackgroundBorderless" android:padding="8dp"/>
+                    <View android:layout_width="8dp" android:layout_height="8dp" android:layout_gravity="top|end" android:layout_marginTop="8dp" android:layout_marginEnd="10dp" android:background="@drawable/badge_background" android:backgroundTint="@color/statusRejectedText"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingBottom="90dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Desk Status Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorBackground"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🛡️ Desk #01 • Executive Clearance" android:textSize="12sp" android:textColor="@color/colorTextPrimary" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Terminal Online" android:textSize="11sp" android:textColor="@color/statusCompletedText" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Admin Profile Hero Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimaryLight"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1.5dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            app:cardCornerRadius="28dp"
+                            app:cardElevation="0dp"
+                            android:layout_marginEnd="12dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_bdms_logo" android:scaleType="centerCrop" android:contentDescription="Admin Avatar"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Admin" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/white" android:background="@color/colorTextPrimary" android:paddingHorizontal="8dp" android:paddingVertical="2dp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" ADMIN-ID #001" android:fontFamily="monospace" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginStart="8dp"/>
+                            </LinearLayout>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hon. Rodrigo V. Dizon" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:layout_marginTop="2dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Punong Barangay • Purok 4 Office" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorSurface"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🔒 Active Session • 2FA Authenticated" android:textSize="11sp" android:textColor="@color/statusCompletedText" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09:42 PHT" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Summary Metric Cards (3 in a row) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="6dp" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="10dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active Staff" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="online" android:textSize="11sp" android:textColor="@color/statusCompletedText" android:textStyle="bold"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginHorizontal="3dp" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="10dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Audits" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="182" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="logs" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="10dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mail Outbox" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="errors" android:textSize="11sp" android:textColor="@color/statusRejectedText" android:textStyle="bold"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- System Controls & Governance Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="SYSTEM CONTROLS &amp; GOVERNANCE" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:textAllCaps="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 modules" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+            </LinearLayout>
+
+            <!-- 5 Governance Modules + Data Vault Card Stack -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Module 1: User Management -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardUserManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/colorOutline"
+                    app:strokeWidth="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/colorPrimary" android:contentDescription="Users" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="User Management" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Create staff/admin accounts, change r..." android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textSize="20sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Module 2: Audit Log -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardAuditLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/colorOutline"
+                    app:strokeWidth="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_recent_history" app:tint="@color/colorPrimary" android:contentDescription="Audit" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Audit Log" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Every sensitive action, with who and w..." android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textSize="20sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Module 3: Certificate Templates -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCertTemplates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/colorOutline"
+                    app:strokeWidth="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_agenda" app:tint="@color/colorPrimary" android:contentDescription="Cert" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Certificate Templates" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seal, signature, and signing official" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textSize="20sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Module 4: Notification Center -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardNotifCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/colorOutline"
+                    app:strokeWidth="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_send" app:tint="@color/colorPrimary" android:contentDescription="Notif" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notification Center" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry failed emails, cancel ..." android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 failed"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/statusRejectedText"
+                            android:background="@color/statusRejectedBg"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textSize="20sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Module 5: Manage Puroks -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardManagePuroks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/colorOutline"
+                    app:strokeWidth="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/colorPrimary" android:contentDescription="Purok" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manage Puroks" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add or review the barangay's Puroks" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textSize="20sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Data Vault Sync Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/colorOutline"
+                    app:strokeWidth="1dp"
+                    android:layout_marginBottom="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_save"
+                            app:tint="@color/colorPrimary"
+                            android:contentDescription="Vault"
+                            android:layout_marginEnd="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data Vault Sync" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last replicated 4 mins ago • Encrypted" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="Sync"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorTextPrimary"
+                            app:backgroundTint="@color/colorSurface"
+                            app:strokeColor="@color/colorOutline"
+                            app:strokeWidth="1dp"
+                            app:cornerRadius="6dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Governance Engine Footer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BDMS Governance Engine v4.2 • Secure Municipal Network\nRepublic of the Philippines • DILG Inter-Operability Standard"
+                android:textSize="11sp"
+                android:textColor="@color/colorTextMuted"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation Bar (5 Tabs for Admin) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorSurface"
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/colorTextSecondary" android:contentDescription="Dashboard"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dashboard" android:textSize="9sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@android:drawable/ic_menu_edit" app:tint="@color/colorTextSecondary" android:contentDescription="Blotter"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blotter" android:textSize="9sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@android:drawable/ic_menu_report_image" app:tint="@color/colorTextSecondary" android:contentDescription="Emergency"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emergency" android:textSize="9sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@android:drawable/ic_menu_send" app:tint="@color/colorTextSecondary" android:contentDescription="Broadcast"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Broadcast" android:textSize="9sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@android:drawable/ic_menu_manage" app:tint="@color/colorPrimary" android:contentDescription="Admin"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Admin" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#68dba9", "on-secondary-container": "#007353", "surface-tint": "#006c4a", "surface-container": "#efecf8", "inverse-on-surface": "#f1effa", "on-primary-fixed": "#002114", "on-surface-variant": "#3d4a42", "on-background": "#1a1b23", "on-tertiary-container": "#f5fff7", "inverse-surface": "#2f3038", "tertiary": "#3f6353", "error-container": "#ffdad6", "outline-variant": "#bccac0", "surface-variant": "#e3e1ec", "on-surface": "#1a1b23", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002115", "on-tertiary-fixed-variant": "#294e3f", "on-tertiary": "#ffffff", "secondary": "#006c4e", "tertiary-fixed-dim": "#a8cfbc", "tertiary-container": "#577c6b", "background": "#fbf8ff", "primary-fixed-dim": "#68dba9", "primary-fixed": "#85f8c4", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#00513a", "surface-container-high": "#e9e7f2", "surface-dim": "#dad9e4", "on-primary-container": "#f5fff7", "on-error-container": "#93000a", "secondary-fixed": "#97f5cc", "surface-bright": "#fbf8ff", "on-secondary": "#ffffff", "surface-container-highest": "#e3e1ec", "primary-container": "#00855d", "tertiary-fixed": "#c3ecd7", "on-primary-fixed-variant": "#005137", "on-error": "#ffffff", "on-secondary-fixed": "#002115", "surface-container-low": "#f4f2fd", "error": "#ba1a1a", "outline": "#6d7a72", "surface": "#fbf8ff", "secondary-container": "#97f5cc", "secondary-fixed-dim": "#7bd8b1", "primary": "#006948" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-xl": "1.5rem", "gutter": "1rem" }, fontFamily: { "headline-md": ["Public Sans"], "headline-lg": ["Public Sans"], "label-lg": ["Public Sans"], "label-sm": ["Public Sans"], "label-md": ["Public Sans"], "display-lg": ["Public Sans"], "headline-sm": ["Public Sans"], "body-md": ["Public Sans"], "body-sm": ["Public Sans"], "body-lg": ["Public Sans"] }, fontSize: { "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "500" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>body { min-height: max(884px, 100dvh); }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Barangay Portal</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">R7 — Complaint List</h1></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-6">
+<!-- Sub-navigation Category Pills -->
+<div class="px-margin pt-3 pb-2">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="flex items-center justify-center px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md active:bg-surface-variant transition-colors whitespace-nowrap">
+        Complaints
+      </button>
+<button class="flex items-center justify-center px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md active:bg-surface-variant transition-colors whitespace-nowrap">
+        Announcements
+      </button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-[16px]">emergency_home</span>
+        Emergency Reports
+      </button>
+</div>
+</div>
+<!-- Resident Identity Banner & Filter Row -->
+<div class="px-margin pt-2 pb-3 flex flex-col gap-3">
+<!-- Mini Civic Resident Card -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Juan dela Cruz</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface-variant">Purok 3</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resident ID: BGY-2024-8841</span>
+</div>
+</div>
+<div class="flex items-center bg-primary-fixed text-on-primary-fixed px-2 py-1 rounded-full gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span class="font-label-sm text-label-sm">BDRRMC Sync</span>
+</div>
+</div>
+<!-- Status Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" id="filter-container">
+<button class="filter-btn active-filter px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap transition-colors flex items-center gap-1" data-filter="all">
+<span>All</span>
+<span class="bg-on-primary/20 text-on-primary px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">3</span>
+</button>
+<button class="filter-btn px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors" data-filter="dispatched">
+        Relief Dispatched
+      </button>
+<button class="filter-btn px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors" data-filter="verified">
+        Verified
+      </button>
+<button class="filter-btn px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap transition-colors" data-filter="review">
+        Under Review
+      </button>
+</div>
+</div>
+<!-- Incident Reports List -->
+<div class="px-margin flex flex-col gap-3.5">
+<!-- Card 1: Flood - Relief Dispatched (Highlighted with Green Verification Checkmark) -->
+<article class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md" data-category="dispatched">
+<!-- Card Top: Disaster Icon, Title, Status Badge -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">tsunami</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Flood (Baha)</h2>
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 text-on-error-container px-1.5 py-0.2 rounded">Severe</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ref #ER-2024-1049 • Oct 18, 11:15 PM</span>
+</div>
+</div>
+<!-- Relief Dispatched Badge with Distinct Success Handover Chip -->
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-center gap-1 bg-surface-container-high text-primary px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm">Relief Dispatched</span>
+</div>
+<!-- Small Distinct Green Checkmark handover tag -->
+<div class="flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full shadow-xs">
+<span class="material-symbols-outlined text-[13px] font-bold">check_circle</span>
+<span class="font-label-sm text-label-sm">Handover Recorded</span>
+</div>
+</div>
+</div>
+<!-- Household Demographic Info -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">diversity_1</span>
+<span class="font-body-sm text-body-sm text-on-surface">4 members (2 adults, 1 child, 1 senior)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Purok 3 • Zone 4</span>
+</div>
+<!-- Needs Tags -->
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Immediate Needs:</span>
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">water_drop</span> Water
+        </span>
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span> Evacuation
+        </span>
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">lunch_dining</span> Food
+        </span>
+</div>
+<!-- Operational Action Note -->
+<div class="bg-surface-container-high/60 rounded-lg p-3 flex gap-2.5 items-start">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">local_shipping</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">BDRRMC Relief Team Alpha</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dispatched relief pack (Rice, canned goods, 5 gal mineral water). Assigned Tanod lead: Officer M. Santos.</p>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 2 hours ago
+        </span>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline p-1">
+<span>View Log Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Typhoon / Strong Winds - Verified -->
+<article class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md" data-category="verified">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">cyclone</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Typhoon / Strong Winds</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ref #ER-2024-1032 • Yesterday at 4:30 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high text-primary px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm">Verified</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">group</span>
+<span class="font-body-sm text-body-sm text-on-surface">3 members affected</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Purok 3 • Riverside</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Immediate Needs:</span>
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">roofing</span> Shelter Kit
+        </span>
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">medication</span> Medicine
+        </span>
+</div>
+<div class="bg-surface-container-high/60 rounded-lg p-3 flex gap-2.5 items-start">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Barangay Tanod Unit 2</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Onsite ocular verification completed. Household placed into dispatch queue for Relief Batch 2 (Tarp &amp; first aid kit).</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 1 day ago
+        </span>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline p-1">
+<span>View Log Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Fire / Sunog - Reported / Resolved by Tanod & BFP -->
+<article class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3 transition-all hover:shadow-md" data-category="review">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Fire / Sunog (Electrical)</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ref #ER-2024-0988 • Oct 12, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high text-on-surface-variant px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span class="font-label-sm text-label-sm">Resolved</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">power</span>
+<span class="font-body-sm text-body-sm text-on-surface">Electrical smoke near Purok 3 post</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Purok 3 Junction</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Immediate Needs:</span>
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-0.5 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">fire_extinguisher</span> Fire Marshall
+        </span>
+</div>
+<div class="bg-surface-container-high/60 rounded-lg p-3 flex gap-2.5 items-start">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">BFP &amp; Tanod Response</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Assessed and isolated by Bureau of Fire Protection and electric cooperative linemen. No casualties.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Oct 12, 2024
+        </span>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:underline p-1">
+<span>View Archive</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+</div>
+<!-- BDRRMC Quick Help Desk & Hotline Banner -->
+<div class="px-margin pt-4 pb-2">
+<div class="bg-surface-container-high rounded-xl p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">night_sight_auto_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Emergency Hotline</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Barangay Operations Center 24/7</span>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-xs active:bg-surface-variant flex items-center gap-1" href="tel:911">
+<span class="material-symbols-outlined text-[16px] text-error">call</span>
+<span>Dial 911</span>
+</a>
+</div>
+</div>
+<!-- Persistent Sticky-Floating CTA Action Button -->
+<div class="fixed bottom-20 right-4 z-40">
+<button aria-label="Submit New Emergency Report" class="flex items-center gap-2 bg-primary text-on-primary font-label-lg text-label-lg px-4 py-3 rounded-full shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_alert</span>
+<span>+ New Report</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple interactive filter toggle for responsive UX delight
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('article[data-category]');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary');
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+      const filterVal = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        if (filterVal === 'all') {
+          card.style.display = 'flex';
+        } else {
+          if (card.getAttribute('data-category') === filterVal) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="document-requests" href="#"><span class="material-symbols-outlined text-[24px]">description</span><span class="font-label-sm text-label-sm">Requests</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="community" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="font-label-sm text-label-sm">Community</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

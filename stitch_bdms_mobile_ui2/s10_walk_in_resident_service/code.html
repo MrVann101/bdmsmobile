@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#68dba9", "secondary-container": "#97f5cc", "on-tertiary-container": "#f5fff7", "primary-fixed": "#85f8c4", "primary-container": "#00855d", "surface-container": "#efecf8", "on-surface-variant": "#3d4a42", "on-background": "#1a1b23", "surface-variant": "#e3e1ec", "inverse-surface": "#2f3038", "secondary-fixed": "#97f5cc", "on-secondary-fixed": "#002115", "on-secondary-fixed-variant": "#00513a", "on-primary-fixed-variant": "#005137", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "error-container": "#ffdad6", "on-surface": "#1a1b23", "outline-variant": "#bccac0", "background": "#fbf8ff", "surface-container-highest": "#e3e1ec", "on-error": "#ffffff", "tertiary-container": "#577c6b", "outline": "#6d7a72", "surface-tint": "#006c4a", "surface-container-low": "#f4f2fd", "on-primary-fixed": "#002114", "primary": "#006948", "on-error-container": "#93000a", "tertiary": "#3f6353", "secondary": "#006c4e", "on-primary-container": "#f5fff7", "secondary-fixed-dim": "#7bd8b1", "on-secondary-container": "#007353", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "surface-container-high": "#e9e7f2", "inverse-primary": "#68dba9", "surface": "#fbf8ff", "on-primary": "#ffffff", "tertiary-fixed": "#c3ecd7", "inverse-on-surface": "#f1effa", "surface-bright": "#fbf8ff", "on-tertiary-fixed-variant": "#294e3f", "tertiary-fixed-dim": "#a8cfbc", "on-tertiary-fixed": "#002115", "surface-dim": "#dad9e4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-lg": "1rem", "space-md": "0.75rem", "gutter": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-md": ["Public Sans"], "headline-sm": ["Public Sans"], "label-lg": ["Public Sans"], "body-sm": ["Public Sans"], "body-lg": ["Public Sans"], "headline-lg": ["Public Sans"], "headline-md": ["Public Sans"], "display-lg": ["Public Sans"], "label-sm": ["Public Sans"], "label-md": ["Public Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col antialiased selection:bg-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">Desk #02</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Walk In Resident Service</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Desk operations menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- Operational Desk Context Banner -->
+<div class="px-margin pt-space-md pb-space-xs">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">desktop_windows</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">Fast-Track Intake</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Live Station
+            </span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Walk-In Intake Console</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Duty Officer</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Clerk J. Mendoza</span>
+</div>
+</div>
+</div>
+<!-- Stepper Tabs -->
+<div class="px-margin py-space-sm sticky top-16 z-30 bg-surface/95 backdrop-blur-md">
+<div class="grid grid-cols-3 bg-surface-container-high p-1 rounded-xl gap-1">
+<button class="step-nav-btn py-2 px-1 rounded-lg text-center transition-all bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md flex flex-col items-center gap-0.5" id="tab-step-1" onclick="switchStep(1)" type="button">
+<span class="font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person_search</span> 1. Search
+        </span>
+<span class="text-[10px] text-on-surface-variant leading-none hidden sm:inline">Lookup Resident</span>
+</button>
+<button class="step-nav-btn py-2 px-1 rounded-lg text-center transition-all text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex flex-col items-center gap-0.5" id="tab-step-2" onclick="switchStep(2)" type="button">
+<span class="font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">badge</span> 2. Register
+        </span>
+<span class="text-[10px] text-on-surface-variant leading-none hidden sm:inline">Credentials Slip</span>
+</button>
+<button class="step-nav-btn py-2 px-1 rounded-lg text-center transition-all text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex flex-col items-center gap-0.5" id="tab-step-3" onclick="switchStep(3)" type="button">
+<span class="font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">assignment_add</span> 3. Request
+        </span>
+<span class="text-[10px] text-on-surface-variant leading-none hidden sm:inline">File on Behalf</span>
+</button>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- FRAME 1: RESIDENT SEARCH & LOOKUP          -->
+<!-- ========================================== -->
+<section class="step-panel px-margin flex flex-col gap-space-md pb-space-xl" id="panel-step-1">
+<!-- Header strip -->
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Resident Lookup &amp; Desk Triage</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Check database registry prior to docketing new transactions</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">search_insights</span>
+</div>
+<!-- Active Search Bar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-sm flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant px-1 font-medium" for="resident-search-input">Search by name, biometric ID, or contact number</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-10 py-3 focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" id="resident-search-input" placeholder="Type query..." type="text" value="Ricardo De Leon"/>
+<button aria-label="Clear search" class="absolute right-3 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Matches found: <strong class="text-on-surface">2 registered records</strong></span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Live Server Query</span>
+</div>
+</div>
+<!-- Resident Search Results Grid -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Matched Residents</span>
+<!-- Result Row 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-headline-sm shrink-0">
+              RD
+            </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Ricardo De Leon</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Registered
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Purok 3 · 0917-552-4019</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-mono">BIO-30192</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-primary">verified</span> Clearance Valid until Dec 2024</span>
+<span>No active blotters</span>
+</div>
+<div class="flex items-center gap-space-sm pt-1">
+<button class="w-full h-11 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.99] transition-transform" onclick="selectResident('Ricardo De Leon', 'BIO-30192', 'Purok 3')" type="button">
+<span>Select for Request</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Result Row 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-headline-sm shrink-0">
+              RL
+            </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Ricarda De Leon</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Registered
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Purok 1 · 0918-223-9911</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-mono">BIO-19402</span>
+</div>
+<div class="flex items-center gap-space-sm pt-1">
+<button class="w-full h-10 bg-surface-container-high text-on-surface hover:bg-surface-container hover:text-primary rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors" onclick="selectResident('Ricarda De Leon', 'BIO-19402', 'Purok 1')" type="button">
+<span>Select Resident</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Non-Registered Branch Action -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col items-center text-center gap-space-sm mt-1">
+<div class="w-10 h-10 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">person_add</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Resident not found in barangay records?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Quickly onboard walk-in applicant and instantly produce login credentials</p>
+</div>
+<button class="w-full h-12 bg-surface-container-lowest text-primary hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99]" onclick="switchStep(2)" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ No match — Register New Resident</span>
+</button>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- FRAME 2: REGISTRATION & CREDENTIAL SLIP    -->
+<!-- ========================================== -->
+<section class="step-panel px-margin flex flex-col gap-space-md pb-space-xl hidden" id="panel-step-2">
+<!-- Section Heading -->
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Fast Registration</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Step 2: Quick Resident Registration</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-[26px]">how_to_reg</span>
+</div>
+<!-- Compact Back-Office Registration Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span> Biometric &amp; Demographic Intake
+        </span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded font-medium">Record Complete</span>
+</div>
+<!-- Field 1: Full Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Full Legal Name</label>
+<div class="bg-surface-container-low rounded-lg px-3 py-2 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Maria Lourdes Santos</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+</div>
+<!-- Field 2: Mobile Number -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Mobile Contact (SMS Notifications)</label>
+<div class="bg-surface-container-low rounded-lg px-3 py-2 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-mono">+63 920 488 1290</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">SMS Verified</span>
+</div>
+</div>
+<!-- Field 3: Email Address -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Email Address (Portal Account)</label>
+<div class="bg-surface-container-low rounded-lg px-3 py-2 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-mono">maria.santos76@gmail.com</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">mail</span>
+</div>
+</div>
+<!-- Two-column compact detail: Purok + Demographics -->
+<div class="grid grid-cols-2 gap-space-sm pt-0.5">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Assigned Purok</label>
+<div class="bg-surface-container-low rounded-lg px-3 py-2">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate block">Purok 4 — San Vicente</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Sex &amp; Age</label>
+<div class="bg-surface-container-low rounded-lg px-3 py-2">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate block">Female · 42 y/o</span>
+</div>
+</div>
+</div>
+<!-- Registered status banner -->
+<div class="bg-secondary-fixed/30 rounded-lg p-2.5 flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">task_alt</span>
+<div class="min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-secondary-fixed font-semibold block leading-tight">Registered Resident &amp; Credentials Generated</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned ID: BIO-91042 · Recorded 09:42 AM Today</span>
+</div>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- MANDATORY SPEC: OFFICIAL CREDENTIAL SLIP CARD  -->
+<!-- ============================================== -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Amber/Emerald Authentication Header -->
+<div class="bg-gradient-to-r from-primary to-primary-container p-space-md text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[20px]">receipt_long</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold leading-tight uppercase tracking-wider">Official Credential Slip</h3>
+<p class="text-[11px] text-on-primary/80">Hand this slip to the resident for portal login</p>
+</div>
+</div>
+<span class="bg-surface-container-lowest/20 px-2 py-0.5 rounded text-[11px] font-mono font-bold tracking-wider uppercase">Desk #02</span>
+</div>
+<!-- Slip Content Container -->
+<div class="p-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<!-- Visual Cutout Divider Effect -->
+<div class="relative py-1 flex items-center">
+<div class="flex-grow border-t-2 border-dashed border-outline-variant/50"></div>
+<span class="flex-shrink mx-2 text-[10px] uppercase font-mono tracking-widest text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">Tear-Off Slip</span>
+<div class="flex-grow border-t-2 border-dashed border-outline-variant/50"></div>
+</div>
+<!-- Resident Monospace Email Row -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider font-semibold">Resident Login Email</span>
+<span class="font-body-md text-body-md text-on-surface font-mono font-bold truncate block" id="clip-email">maria.santos76@gmail.com</span>
+</div>
+<button class="w-9 h-9 rounded-md bg-surface-container-lowest text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-sm shrink-0" onclick="copySnippet('clip-email', this)" title="Copy Email" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Generated Temporary Password Row -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider font-semibold">Generated Temporary Password</span>
+<span class="font-headline-sm text-headline-sm text-primary font-mono font-bold tracking-widest block" id="clip-pass">BDMS-8492-Tk</span>
+</div>
+<button class="w-9 h-9 rounded-md bg-surface-container-lowest text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors shadow-sm shrink-0" onclick="copySnippet('clip-pass', this)" title="Copy Temporary Password" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- QR Code / Fast Login Barcode Preview -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center gap-space-md">
+<!-- Inline lightweight SVG QR code pattern -->
+<div class="w-20 h-20 bg-surface-container-low p-1.5 rounded-lg flex items-center justify-center shrink-0">
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewbox="0 0 24 24">
+<!-- Corner Finder 1 -->
+<rect height="6" rx="1" width="6" x="2" y="2"></rect>
+<rect fill="white" height="4" width="4" x="3" y="3"></rect>
+<rect height="2" width="2" x="4" y="4"></rect>
+<!-- Corner Finder 2 -->
+<rect height="6" rx="1" width="6" x="16" y="2"></rect>
+<rect fill="white" height="4" width="4" x="17" y="3"></rect>
+<rect height="2" width="2" x="18" y="4"></rect>
+<!-- Corner Finder 3 -->
+<rect height="6" rx="1" width="6" x="2" y="16"></rect>
+<rect fill="white" height="4" width="4" x="3" y="17"></rect>
+<rect height="2" width="2" x="4" y="18"></rect>
+<!-- Center & Data clusters -->
+<rect height="2" width="2" x="10" y="2"></rect>
+<rect height="2" width="3" x="10" y="6"></rect>
+<rect height="3" width="2" x="13" y="4"></rect>
+<rect height="4" rx="0.5" width="6" x="9" y="10"></rect>
+<rect fill="white" height="2" width="2" x="11" y="11"></rect>
+<rect height="2" width="3" x="2" y="10"></rect>
+<rect height="3" width="2" x="6" y="11"></rect>
+<rect height="2" width="3" x="16" y="10"></rect>
+<rect height="4" width="2" x="20" y="11"></rect>
+<rect height="3" width="2" x="10" y="16"></rect>
+<rect height="2" width="3" x="14" y="17"></rect>
+<rect height="4" rx="0.5" width="4" x="18" y="17"></rect>
+<rect height="2" width="4" x="10" y="20"></rect>
+</svg>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Fast Login QR Code</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Resident scans this code using any smartphone camera to authenticate immediately into the BDMS Citizen Portal.</p>
+<span class="font-label-sm text-label-sm text-primary font-mono mt-1 inline-block">Valid: 72 hours until first password reset</span>
+</div>
+</div>
+<!-- Instruction Note -->
+<div class="flex items-center gap-2 p-2 bg-secondary-fixed/20 rounded-md text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">print</span>
+<p class="font-label-sm text-label-sm font-medium">Hand this slip or print receipt to the resident for portal login.</p>
+</div>
+<!-- Action Buttons inside slip card -->
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full h-11 bg-surface-container-high hover:bg-surface-container text-on-surface rounded-lg font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 transition-colors" onclick="simulatePrint(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+<span>Print Slip (Thermal POS)</span>
+</button>
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-[0.99]" onclick="switchStep(3)" type="button">
+<span>Proceed to Request on Behalf</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- FRAME 3: REQUEST ON BEHALF (WALK-IN)       -->
+<!-- ========================================== -->
+<section class="step-panel px-margin flex flex-col gap-space-md pb-space-xl hidden" id="panel-step-3">
+<!-- Section Heading -->
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Docketing</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Step 3: File Document Request on Behalf</h2>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">description</span>
+</div>
+<!-- Active Resident Context Strip -->
+<div class="bg-secondary-fixed/40 rounded-xl p-space-md flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-headline-sm shrink-0">
+          MLS
+        </div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant uppercase tracking-wider font-semibold block">Filing for Applicant</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate" id="filing-applicant-name">Maria Lourdes Santos</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">BIO-91042 · Purok 4 — San Vicente</p>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-primary hover:bg-surface-container text-label-sm font-label-sm font-semibold shrink-0 shadow-sm" onclick="switchStep(1)" type="button">
+        Change
+      </button>
+</div>
+<!-- Filing Form (Modeled cleanly to R5 New Document Request) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Field 1: Document Type Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="doc-type-select">
+<span>Document Type</span>
+<span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg pl-3 pr-10 py-3 appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 font-medium" id="doc-type-select">
+<option selected="">Barangay Clearance (Employment / Local)</option>
+<option>Barangay Certificate of Indigency</option>
+<option>Barangay Residency Certificate</option>
+<option>Barangay Business Clearance</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1">Standard valid clearance issued for pre-employment compliance.</span>
+</div>
+<!-- Field 2: Purpose Outlined Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="doc-purpose">
+<span>Purpose / Justification</span>
+<span class="text-error">*</span>
+</label>
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg p-3 focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" id="doc-purpose" rows="2">Local Pre-Employment Requirement (Utility Specialist)</textarea>
+<div class="flex justify-between px-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Official citation printed on certificate header</span>
+<span>52 / 120 chars</span>
+</div>
+</div>
+<!-- Field 3: Delivery Method Radio Buttons -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Delivery &amp; Fulfillment Mode</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Radio 1: Instant Counter Pickup (Selected) -->
+<label class="delivery-option flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-high/60 cursor-pointer">
+<input checked="" class="mt-1 text-primary focus:ring-0" name="delivery-mode" type="radio"/>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block flex items-center gap-1">
+                Instant Counter Pickup
+                <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Printed &amp; embossed at Desk #02 immediately</span>
+</div>
+</label>
+<!-- Radio 2: Digital Copy via Portal -->
+<label class="delivery-option flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer">
+<input class="mt-1 text-primary focus:ring-0" name="delivery-mode" type="radio"/>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Digital Copy via Portal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">PDF with verifiable QR sent to registered email</span>
+</div>
+</label>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- MANDATORY SPEC: PUROK CLEARANCE UPLOAD REPLACEMENT BADGE       -->
+<!-- Neutral grey / light-tinted civic exemption verification badge -->
+<!-- ============================================================== -->
+<div class="bg-surface-container-high/70 rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Clearance Exempted — Walk-In Request</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Physical Presence</span>
+</div>
+<div class="flex items-start gap-2 mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">Exempted: Verified in-person at Barangay Hall Desk #02 by Clerk J. Mendoza.</strong> Resident physically identified; mandatory Purok clearance document upload waived per Executive Ordinance 2023-04.
+          </p>
+</div>
+</div>
+<!-- Fee Calculation & Receipt Preview -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Fee Breakdown</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₱50.00</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Receipt Series</span>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold bg-surface-container-lowest px-2 py-0.5 rounded">OR-2024-9941</span>
+</div>
+</div>
+<!-- Final Submit Primary Action Button -->
+<div class="pt-1 flex flex-col gap-2">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-[0.99]" onclick="executeIssuance(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span>Create Request &amp; Issue Official Receipt (₱50.00)</span>
+</button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant">Transaction automatically logs in Barangay Treasury and Blotter Audit Ledger</p>
+</div>
+</div>
+</section>
+<!-- Live Toast Notification Container -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2.5 text-label-md font-label-md pointer-events-none opacity-0 transition-opacity duration-200 z-50 max-w-[90vw]" id="live-toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">check_circle</span>
+<span id="toast-text">Operation completed</span>
+</div>
+</div>
+<script>
+  // Simple Step Navigator
+  function switchStep(stepIndex) {
+    // Hide all panels
+    const panels = document.querySelectorAll('.step-panel');
+    panels.forEach(p => p.classList.add('hidden'));
+
+    // Reset button states
+    const navButtons = document.querySelectorAll('.step-nav-btn');
+    navButtons.forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      btn.classList.add('text-on-surface-variant');
+    });
+
+    // Activate selected
+    const targetPanel = document.getElementById('panel-step-' + stepIndex);
+    const targetBtn = document.getElementById('tab-step-' + stepIndex);
+
+    if (targetPanel && targetBtn) {
+      targetPanel.classList.remove('hidden');
+      targetBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      targetBtn.classList.remove('text-on-surface-variant');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  // Select resident from Step 1 and proceed to Step 3
+  function selectResident(name, bioId, purok) {
+    const applicantElem = document.getElementById('filing-applicant-name');
+    if (applicantElem) {
+      applicantElem.textContent = name;
+      applicantElem.nextElementSibling.textContent = `${bioId} · ${purok}`;
+    }
+    showToast(`Resident ${name} selected`);
+    switchStep(3);
+  }
+
+  // Copy helper with visual feedback
+  function copySnippet(elementId, btn) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    const text = el.textContent || el.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      showToast(`Copied: ${text}`);
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        const orig = icon.textContent;
+        icon.textContent = 'done';
+        setTimeout(() => { icon.textContent = orig; }, 1600);
+      }
+    }).catch(() => {
+      showToast('Copied to clipboard');
+    });
+  }
+
+  // Simulate POS Print
+  function simulatePrint(btn) {
+    const origHtml = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Printing to POS #02...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] text-primary">done</span><span>Printed to Thermal POS (Slip #4029)</span>`;
+      showToast('Thermal credential slip generated');
+      setTimeout(() => {
+        btn.innerHTML = origHtml;
+      }, 2500);
+    }, 1000);
+  }
+
+  // Execute request issuance
+  function executeIssuance(btn) {
+    const origHtml = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">hourglass_top</span><span>Printing OR-2024-9941 & Clearance...</span>`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span><span>OR-2024-9941 Issued · ₱50.00 Received</span>`;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-secondary');
+      showToast('Request created & OR-2024-9941 printed successfully');
+      setTimeout(() => {
+        btn.innerHTML = origHtml;
+        btn.disabled = false;
+        btn.classList.add('bg-primary');
+        btn.classList.remove('bg-secondary');
+      }, 4000);
+    }, 1200);
+  }
+
+  // Toast utility
+  function showToast(msg) {
+    const toast = document.getElementById('live-toast');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.textContent = msg;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2400);
+  }
+</script></main></body></html>

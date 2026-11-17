@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface">
+
+    <!-- Fixed Header Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        app:elevation="2dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S4 — Announcement..." android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" ● Draft " android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Barangay Broadcast Bulletin" android:textSize="11sp" android:textColor="@color/colorPrimary" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@android:drawable/ic_menu_more" app:tint="@color/colorTextPrimary" android:contentDescription="More" android:background="?attr/selectableItemBackgroundBorderless" android:padding="8dp"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingBottom="90dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Auto-saved Cloud Ribbon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="☁ Auto-saved 1m ago to Barangay Cloud" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAFF REF: BDMS-BC-2024-89" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+            </LinearLayout>
+
+            <!-- 1. Notice Category -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Notice Category" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Step 1 of 6" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <!-- Segmented Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:background="@color/colorBackground"
+                        android:padding="3dp"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="ℹ General" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:background="@color/colorSurface" android:gravity="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="📅 Event" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="⚠ Emergency" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorBackground"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Standard Citizen Feed Broadcast — Standard publication delivered to all citizen apps. Switching to Emergency triggers immediate priority SMS blast &amp; persistent siren alerts."
+                            android:textSize="11sp"
+                            android:textColor="@color/colorTextSecondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 2. Announcement Title -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Announcement Title" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="54 / 100" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Scheduled Water Interruption &amp; Relief Ta"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:background="@drawable/badge_background"
+                        android:paddingHorizontal="12dp"
+                        android:maxLines="1"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Keep headers concise, informative, and accessible to mobile notification previews."
+                        android:textSize="11sp"
+                        android:textColor="@color/colorTextSecondary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 3. Announcement Body -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Announcement Body" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tagalog / English allowed" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="top|start"
+                        android:text="Please be advised that Manila Water will conduct scheduled emergency mainline repairs affecting Purok 1, 2, and 3 on Saturday, Nov 2, from 8:00 AM to 6:00 PM. Clean water distribution tankers..."
+                        android:textSize="13sp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:background="@drawable/badge_background"
+                        android:padding="12dp"
+                        android:inputType="textMultiLine"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="B   I   ☰   🔗" android:textSize="14sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="312 chars" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 4. Target Audience -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Target Audience" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Specify resident delivery jurisdiction" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok Level" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@color/colorBackground" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+
+                    <!-- Barangay-Wide Switch -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorBackground"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Barangay-Wide Broadcast" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" ALL" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@color/colorOutline" android:paddingHorizontal="4dp" android:layout_marginStart="4dp"/>
+                            </LinearLayout>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Broadcast to all 7 puroks and registered residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="SELECT TARGETED PUROKS (7 REGISTERED)" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear selection" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <!-- Purok Chips -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Purok 1" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/colorPrimary" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:layout_marginEnd="6dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Purok 2" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/colorPrimary" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:layout_marginEnd="6dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Purok 3" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/colorPrimary" android:paddingHorizontal="12dp" android:paddingVertical="6dp"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ Purok 4" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:layout_marginEnd="6dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ Purok 5" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:layout_marginEnd="6dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ Purok 6" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="12dp" android:paddingVertical="6dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Targeted Reach Summary Box -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/statusCompletedBg"
+                        android:padding="12dp"
+                        android:gravity="center_vertical">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎯 Targeted Reach: ~1,840 verified households" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/statusCompletedText"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coverage: Purok 1, Purok 2, Purok 3 (approx. 5,520 residents)" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/checkbox_on_background" app:tint="@color/statusCompletedText" android:contentDescription="Verified"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 5. Attachments & Advisories -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Attachments &amp; Advisories" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Optional (Max 10MB)" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorBackground"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_send" app:tint="@color/statusRejectedText" android:contentDescription="PDF" android:layout_marginEnd="10dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manila_Water_Advisory_Nov2.pdf" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.2 MB • Official Advisory Copy" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_close_clear_cancel" app:tint="@color/colorTextSecondary" android:contentDescription="Remove"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:text="+ Add Document or Photo"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimary"
+                        app:backgroundTint="@color/colorPrimaryLight"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 6. Dispatch Delivery Channels -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dispatch Delivery Channels" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gateway: Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Send Push Notification to Residents"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_marginBottom="8dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Send SMS Alert via LGU Gateway"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorTextPrimary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Posting Officer Audit Signature -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorBackground"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@android:drawable/ic_menu_info_details" app:tint="@color/colorTextSecondary" android:contentDescription="Badge" android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posting Officer: Admin Desk / Kagawad on Duty • Authenticated Token"
+                    android:textSize="11sp"
+                    android:textColor="@color/colorTextSecondary" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Sticky Bottom Action Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorSurface"
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_view"
+            app:tint="@color/colorTextPrimary"
+            android:contentDescription="Preview"
+            android:background="@drawable/badge_background"
+            android:backgroundTint="@color/colorBackground"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/publishAnnouncementBtn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Publish Announcement"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

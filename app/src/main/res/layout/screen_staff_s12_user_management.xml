@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="40dp">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Go back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="User Management"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginStart="8dp" />
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_search" app:tint="@color/colorTextPrimary" android:contentDescription="Search" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:layout_marginEnd="4dp"/>
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_manage" app:tint="@color/colorTextPrimary" android:contentDescription="Filter" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Sub-header & Staff/Admin Create Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BARANGAY ADMIN PORTAL" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:textAllCaps="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Users Directory" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="+ Staff/Admin"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/badge_background"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="12dp">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_search" app:tint="@color/colorTextSecondary" android:contentDescription="Search" android:layout_marginEnd="8dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Search by name, email, or mobile..." android:textSize="13sp" android:textColor="@color/colorTextSecondary"/>
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_close_clear_cancel" app:tint="@color/colorTextSecondary" android:contentDescription="Clear"/>
+        </LinearLayout>
+
+        <!-- Filter Pills Row -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All (42)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/colorPrimary" android:paddingHorizontal="14dp" android:paddingVertical="8dp" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Admin (3)" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="12dp" android:paddingVertical="8dp" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Staff (7)" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="12dp" android:paddingVertical="8dp" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Residents (32)" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="12dp" android:paddingVertical="8dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Active Duty Officers Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+            <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedText" android:layout_marginEnd="8dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="3 Officers on Active Duty • Barangay Poblacion" android:textSize="12sp" android:textColor="@color/colorTextPrimary" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Live Sync" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+        <!-- Users List -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <!-- User 1: Kap. Rodrigo Dizon -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="RD" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/colorPrimary" android:gravity="center" android:layout_marginEnd="12dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kap. Rodrigo Dizon" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ADMIN" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/white" android:background="@color/statusRejectedText" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="6dp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="punong.barangay@dilg.gov.ph" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+63 917 882 1042" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- User 2: Maria Santos -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="MS" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maria Santos" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAFF ⇄" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="6dp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="m.santos.clerk@brgy-pob.ph" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+63 928 440 3190" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- User 3: Ricardo De Leon -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="RL" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:gravity="center" android:layout_marginEnd="12dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ricardo De Leon" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RESIDENT" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@color/colorBackground" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="6dp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ricardo.deleon92@gmail.com" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+63 905 771 4455" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Form S-12: New Staff / Admin Account -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Staff / Admin Account" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Generate civic credentials instantly" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Form S-12" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full Legal Name" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="4dp"/>
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="e.g. Sgt. Danilo P. Manalo" android:textSize="13sp" android:background="@drawable/badge_background" android:paddingHorizontal="12dp" android:layout_marginBottom="12dp" android:maxLines="1"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Official Government / Contact Email" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="4dp"/>
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="e.g. d.manalo@dilg.gov.ph" android:textSize="13sp" android:background="@drawable/badge_background" android:paddingHorizontal="12dp" android:layout_marginBottom="16dp" android:maxLines="1"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Assigned Privilege Role" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@color/colorPrimaryLight" android:padding="12dp" android:layout_marginEnd="4dp">
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Staff Duty" android:checked="true" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blotter &amp; Clearances" android:textSize="10sp" android:textColor="@color/colorTextSecondary" android:layout_marginStart="30dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@color/colorBackground" android:padding="12dp" android:layout_marginStart="4dp">
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Admin Full" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full Governance" android:textSize="10sp" android:textColor="@color/colorTextSecondary" android:layout_marginStart="30dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCreateUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="👤 + Create Account &amp; Generate Slip"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Official Credential Slip (CONFIDENTIAL) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1.5dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Official Credential Slip" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CONFIDENTIAL" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusRejectedText" android:background="@color/statusRejectedBg" android:paddingHorizontal="8dp" android:paddingVertical="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shown once — hand it to the new user." android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Designated Account: Danilo P. Manalo (Staff)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:layout_marginBottom="10dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@color/colorBackground" android:padding="10dp" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Authorized Email" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="danilo.manalo@dilg.gov.ph" android:textSize="13sp" android:textStyle="bold" android:fontFamily="monospace" android:textColor="@color/colorTextPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@color/colorBackground" android:padding="10dp" android:layout_marginBottom="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temporary Master Password" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Brgy-Admin#9402!" android:textSize="15sp" android:textStyle="bold" android:fontFamily="monospace" android:textColor="@color/statusCompletedText"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="🖨 Print Slip (Thermal POS)"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorTextPrimary"
+                        app:backgroundTint="@color/colorBackground"
+                        app:cornerRadius="6dp"
+                        android:layout_marginEnd="4dp"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Done"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/statusCompletedText"
+                        app:cornerRadius="6dp"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Compliance Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp">
+            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@android:drawable/ic_menu_info_details" app:tint="@color/colorTextSecondary" android:contentDescription="Shield" android:layout_marginEnd="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BDMS Republic Act 10173 (Data Privacy) Compliance Mode" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

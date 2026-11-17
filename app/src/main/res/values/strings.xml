@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BDMSMobile</string>
+
+    <!-- Placeholder civic hotlines: confirm official barangay phone numbers before production release -->
+    <string name="barangay_emergency_hotlines">BDRRMC Hotline: (02) 8921-BDRR\nPhilippine National Police: 911\nBureau of Fire Protection: (02) 8426-0219</string>
+</resources>

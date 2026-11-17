@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_resident"
+    app:startDestination="@id/residentDashboardFragment">
+
+    <fragment
+        android:id="@+id/residentDashboardFragment"
+        android:name="com.barangay.bdms.ui.resident.ResidentDashboardFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_dashboard_to_requestForm"
+            app:destination="@id/documentRequestFormFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_requestDetail"
+            app:destination="@id/documentRequestDetailFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_complaintForm"
+            app:destination="@id/complaintFormFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_emergencyForm"
+            app:destination="@id/emergencyReportFormFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_notifications"
+            app:destination="@id/notificationListFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_community"
+            app:destination="@id/communityHostFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_requests"
+            app:destination="@id/documentRequestListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentRequestListFragment"
+        android:name="com.barangay.bdms.ui.resident.DocumentRequestListFragment"
+        android:label="My Requests">
+        <action
+            android:id="@+id/action_requestList_to_requestForm"
+            app:destination="@id/documentRequestFormFragment" />
+        <action
+            android:id="@+id/action_requestList_to_requestDetail"
+            app:destination="@id/documentRequestDetailFragment" />
+        <action
+            android:id="@+id/action_requestList_to_notifications"
+            app:destination="@id/notificationListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentRequestFormFragment"
+        android:name="com.barangay.bdms.ui.resident.DocumentRequestFormFragment"
+        android:label="New Document Request" />
+
+    <fragment
+        android:id="@+id/documentRequestDetailFragment"
+        android:name="com.barangay.bdms.ui.resident.DocumentRequestDetailFragment"
+        android:label="Request Detail" />
+
+    <fragment
+        android:id="@+id/communityHostFragment"
+        android:name="com.barangay.bdms.ui.resident.CommunityHostFragment"
+        android:label="Community">
+        <action
+            android:id="@+id/action_community_to_complaintForm"
+            app:destination="@id/complaintFormFragment" />
+        <action
+            android:id="@+id/action_community_to_emergencyForm"
+            app:destination="@id/emergencyReportFormFragment" />
+        <action
+            android:id="@+id/action_community_to_notifications"
+            app:destination="@id/notificationListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/complaintFormFragment"
+        android:name="com.barangay.bdms.ui.resident.ComplaintFormFragment"
+        android:label="New Complaint" />
+
+    <fragment
+        android:id="@+id/emergencyReportFormFragment"
+        android:name="com.barangay.bdms.ui.resident.EmergencyReportFormFragment"
+        android:label="Report Emergency" />
+
+    <fragment
+        android:id="@+id/notificationListFragment"
+        android:name="com.barangay.bdms.ui.resident.NotificationListFragment"
+        android:label="Notifications">
+        <action
+            android:id="@+id/action_notifications_to_requestDetail"
+            app:destination="@id/documentRequestDetailFragment" />
+        <action
+            android:id="@+id/action_notifications_to_community"
+            app:destination="@id/communityHostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.barangay.bdms.ui.resident.ProfileFragment"
+        android:label="My Profile">
+        <action
+            android:id="@+id/action_profile_to_notifications"
+            app:destination="@id/notificationListFragment" />
+    </fragment>
+
+</navigation>

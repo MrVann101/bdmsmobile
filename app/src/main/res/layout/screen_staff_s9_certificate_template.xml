@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="40dp">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Go back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Evacuee Registration" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 4 Covered Court Depot" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 1 of 3"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/statusCompletedText"
+                android:background="@color/statusCompletedBg"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_more" app:tint="@color/colorTextPrimary" android:contentDescription="More" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:layout_marginEnd="4dp"/>
+            <androidx.cardview.widget.CardView android:layout_width="32dp" android:layout_height="32dp" app:cardCornerRadius="16dp" app:cardBackgroundColor="@color/colorPrimary" app:cardElevation="0dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_bdms_logo" android:scaleType="centerCrop" android:contentDescription="Profile"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Priority Incident Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/statusRejectedBg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="PRIORITY INCIDENT • EMERG-044" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active Surge" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusRejectedText" android:background="@color/colorSurface" android:paddingHorizontal="8dp" android:paddingVertical="2dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baha / Flash Flood Al..."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/statusRejectedText" />
+        </LinearLayout>
+
+        <!-- Fast-Track QR Scan Tab -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:padding="3dp"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="[🔲] QR Scan Fast-Track" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:background="@color/colorSurface" android:gravity="center"/>
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Manual Entry" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Auto-Populated Digital ID Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/statusCompletedBg"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/checkbox_on_background" app:tint="@color/statusCompletedText" android:contentDescription="Verified" android:layout_marginEnd="8dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Auto-Populated Digital ID" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/statusCompletedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Juan Carlos Mercado" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BIO-88219" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/colorSurface" android:paddingHorizontal="6dp" android:paddingVertical="2dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ Barangay Resident Registry sync completed • 10s Fast-Track"
+                android:textSize="11sp"
+                android:textColor="@color/colorTextSecondary" />
+        </LinearLayout>
+
+        <!-- Section 1: Household Head & Origin -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1  Household Head &amp; Origin" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BDRRMC Intake" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full Name of Household Head" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/colorBackground" android:padding="12dp" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 Juan Carlos Mercado" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Verified" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="6dp" android:paddingVertical="2dp"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Primary Mobile Contact" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📞 +63 918 224 8199" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:background="@color/colorBackground" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Danger Zone Origin / Household Address" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@color/statusRejectedBg" android:padding="10dp" android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📍 House #18, Purok 3 Riverside Alleyway" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Zone A — Critical Creek Bank Overflow" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reason for Evacuation" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Forced (Baha / Flood)" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedText" android:paddingHorizontal="10dp" android:paddingVertical="6dp" android:layout_marginEnd="6dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Preemptive Call" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorBackground" android:paddingHorizontal="10dp" android:paddingVertical="6dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section 2: Household Roster -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2  Household Roster" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4 Certified Members" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="+ Add"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorPrimary"
+                        app:backgroundTint="@color/colorPrimaryLight"
+                        app:cornerRadius="6dp" />
+                </LinearLayout>
+
+                <!-- Member 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/colorBackground" android:padding="10dp" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="26dp" android:layout_height="26dp" android:text="1" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorOutline" android:gravity="center" android:layout_marginEnd="10dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Juan Carlos Mercado" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Head" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:background="@color/colorPrimaryLight" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="6dp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="42 y/o • Male • Able-bodied Earner" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_edit" app:tint="@color/colorTextSecondary" android:contentDescription="Edit"/>
+                </LinearLayout>
+
+                <!-- Member 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/colorBackground" android:padding="10dp" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="26dp" android:layout_height="26dp" android:text="2" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorOutline" android:gravity="center" android:layout_marginEnd="10dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Teresa Mercado" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spouse" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@color/colorOutline" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="6dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚼 Pregnant (6 Mos)" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/statusRejectedText" android:background="@color/statusRejectedBg" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="4dp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="39 y/o • Female • Priority Care Sector" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_edit" app:tint="@color/colorTextSecondary" android:contentDescription="Edit"/>
+                </LinearLayout>
+
+                <!-- Member 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/colorBackground" android:padding="10dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="26dp" android:layout_height="26dp" android:text="4" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:background="@drawable/badge_background" android:backgroundTint="@color/colorOutline" android:gravity="center" android:layout_marginEnd="10dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remedios Mercado" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Grandmother" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@color/colorOutline" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="6dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🦽 Senior (74y)" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/statusRejectedText" android:background="@color/statusRejectedBg" android:paddingHorizontal="6dp" android:paddingVertical="1dp" android:layout_marginStart="4dp"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="♿ Wheelchair / PWD" android:textSize="11sp" android:textColor="@color/statusRejectedText" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_edit" app:tint="@color/colorTextSecondary" android:contentDescription="Edit"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Assigned Tent Success Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/statusCompletedText"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TENT ASSIGNED" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.1"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B-05" android:textSize="32sp" android:textStyle="bold" android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="end">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modular Family Unit" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ground Bay 2 • Ramp-Adjacent" android:textSize="11sp" android:textColor="@color/colorBackground"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Complete Intake Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCompleteIntake"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="✓ Complete Intake • Tent B-05"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/statusCompletedText"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Draft"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextSecondary"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

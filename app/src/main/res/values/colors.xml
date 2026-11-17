@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Design Tokens -->
+    <color name="colorPrimary">#059669</color>
+    <color name="colorPrimaryDark">#047857</color>
+    <color name="colorPrimaryLight">#D1FAE5</color>
+    <color name="colorBackground">#FCFCFC</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorTextPrimary">#171717</color>
+    <color name="colorTextSecondary">#52525B</color>
+    <color name="colorTextMuted">#A1A1AA</color>
+    <color name="colorOutline">#E5E5E5</color>
+
+    <!-- Status Badge Colors -->
+    <color name="statusPendingBg">#FFFBEB</color>
+    <color name="statusPendingText">#B45309</color>
+    <color name="statusProcessingBg">#EFF6FF</color>
+    <color name="statusProcessingText">#1D4ED8</color>
+    <color name="statusReadyBg">#ECFEFF</color>
+    <color name="statusReadyText">#0E7490</color>
+    <color name="statusCompletedBg">#F0FDF4</color>
+    <color name="statusCompletedText">#15803D</color>
+    <color name="statusRejectedBg">#FEF2F2</color>
+    <color name="statusRejectedText">#B91C1C</color>
+    <color name="statusCancelledBg">#F4F4F5</color>
+    <color name="statusCancelledText">#52525B</color>
+    <color name="overlayScrim">#80FFFFFF</color>
+</resources>

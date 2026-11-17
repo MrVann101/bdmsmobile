@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Staff Shift &amp; Station Settings"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorSurface"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Assigned Station: Desk 1 (Main Hall)" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active Shift: 08:00 AM — 05:00 PM" android:textSize="14sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="24dp"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Receive Emergency Siren Broadcasts"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                android:checked="true"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStaffLogout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="End Shift &amp; Log Out"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/statusRejectedText"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

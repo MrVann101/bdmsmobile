@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="32dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Privacy Notice (RA 10173)"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Republic Act No. 10173 — Data Privacy Act of 2012"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.35"
+                    android:text="1. Collection Purpose: Your personal details, residency information, Purok designation, and uploaded supporting documents are collected strictly for barangay governance, certificate issuance, complaint handling, and disaster relief coordination.\n\n2. Restricted Visibility: Sensitive identifiers (CTC/OR details and declared disabilities) are shown only on your own profile and are never exposed in public or multi-resident listings.\n\n3. Accountability &amp; Audit: Administrative processing of requests, complaints, and emergency dispatch is logged for transparency and RA 10173 compliance.\n\n4. Data Rights: You may review your profile and request corrections to restricted fields such as your Purok at the Barangay Hall."
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@color/colorOutline" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbConsent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="I have read, understood, and consent to the processing of my personal data under RA 10173."
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvConsentError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Please accept the privacy notice to proceed."
+                    android:textColor="@color/statusRejectedText"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStep5Back"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Back"
+                android:textColor="@color/colorTextPrimary"
+                app:cornerRadius="8dp"
+                app:strokeColor="@color/colorOutline" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStep5Next"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="2"
+                android:text="I Agree &amp; Continue"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

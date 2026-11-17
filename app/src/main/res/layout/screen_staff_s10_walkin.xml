@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="40dp">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Go back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DESK #02" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="6dp" android:paddingVertical="1dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Walk In Resident Service" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_more" app:tint="@color/colorTextPrimary" android:contentDescription="More" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Fast-Track Intake Station Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryLight"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/colorPrimary" android:contentDescription="Station" android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FAST-TRACK INTAKE • Live Station" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Walk-In Intake Con..." android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Duty Officer" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clerk J. Mendoza" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 3 Step Wizard Tabs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:padding="3dp"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="👤  1. Search" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:background="@color/colorSurface" android:gravity="center"/>
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="📦  2. Register" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="📋  3. Request" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Resident Lookup & Desk Triage Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resident Lookup &amp; Desk Triage" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Check database registry prior to docketing new transactions" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+            </LinearLayout>
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_search" app:tint="@color/colorPrimary" android:contentDescription="Search"/>
+        </LinearLayout>
+
+        <!-- Search Input Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:background="@drawable/badge_background"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="8dp">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_search" app:tint="@color/colorTextPrimary" android:contentDescription="Search" android:layout_marginEnd="8dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="Ricardo De Leon"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextPrimary"
+                android:maxLines="1" />
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_close_clear_cancel" app:tint="@color/colorTextSecondary" android:contentDescription="Clear"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Matches found: 2 registered records" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Live Server Query" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText"/>
+        </LinearLayout>
+
+        <!-- Matched Residents Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MATCHED RESIDENTS"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextSecondary"
+            android:textAllCaps="true"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Match Card 1: Ricardo De Leon -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1.5dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <!-- Avatar RD -->
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="RD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/statusCompletedText"
+                        android:background="@drawable/badge_background"
+                        android:backgroundTint="@color/statusCompletedBg"
+                        android:gravity="center"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ricardo De Leon" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 3 • 0917-552-4019" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BIO-30192"
+                        android:fontFamily="monospace"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorTextSecondary"
+                        android:background="@color/colorBackground"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorBackground"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="✓ Clearance Valid until Dec 2024" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No active blotters" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSelectRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="Select for Request →"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Match Card 2: Ricarda De Leon -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <!-- Avatar RL -->
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="RL"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextSecondary"
+                        android:background="@drawable/badge_background"
+                        android:backgroundTint="@color/colorBackground"
+                        android:gravity="center"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ricarda De Leon" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 1 • 0918-223-9911" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BIO-19402"
+                        android:fontFamily="monospace"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorTextSecondary"
+                        android:background="@color/colorBackground"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Select Resident →"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    app:backgroundTint="@color/colorBackground"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Resident Not Found Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    app:tint="@color/colorPrimary"
+                    android:contentDescription="New"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resident not found in barangay records?"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quickly onboard walk-in applicant and instantly produce login credentials"
+                    android:textSize="11sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:gravity="center"
+                    android:layout_marginBottom="14dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="+ No match — Register New Resident"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    app:backgroundTint="@color/colorPrimaryLight"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

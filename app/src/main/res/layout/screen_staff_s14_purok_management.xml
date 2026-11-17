@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="40dp">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Go back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Purok Management"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginStart="8dp" />
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_search" app:tint="@color/colorTextPrimary" android:contentDescription="Search" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:layout_marginEnd="4dp"/>
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_manage" app:tint="@color/colorTextPrimary" android:contentDescription="Filter" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Top Tab Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:padding="3dp"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Directory" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:background="@color/colorSurface" android:gravity="center"/>
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Add Modal" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Validation Error" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Admin Registry Header & Add Purok Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ADMIN REGISTRY" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:textAllCaps="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok Boundaries" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddPurok"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="+ Add Purok"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/statusCompletedText"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+
+        <!-- Summary Stats Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🟩 7 Designated Zones" android:textSize="12sp" android:textColor="@color/colorTextPrimary" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👥 7,360 Recorded Inhabitants" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+        </LinearLayout>
+
+        <!-- Purok Cards List -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Purok 1 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="01" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 1" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Near the barangay hall &amp; central plaza" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 1,420 Verified Residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏢 District Central" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Purok 2 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="02" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 2" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riverside boundary &amp; drainage conciliation..." android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 980 Verified Residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌊 Waterways Post" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Purok 3 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/statusRejectedText" app:strokeWidth="1.5dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="03" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusRejectedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusRejectedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 3" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Creek bank floodway zone (High Surge)" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="⚠ 1,150 Verified Residents" android:textSize="11sp" android:textColor="@color/statusRejectedText" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚨 Surge Level 2" android:textSize="11sp" android:textColor="@color/statusRejectedText" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Purok 4 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="04" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 4" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Covered court evacuation depot &amp; school zone" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 1,600 Verified Residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⛺ Evac Center Base" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Purok 5 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="05" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 5" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Agricultural edge &amp; commercial strip" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 850 Verified Residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌾 Agri-Market Sector" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Purok 6 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="06" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 6" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Industrial bypass &amp; sub-station 2" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 720 Verified Residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛣️ Highway Perimeter" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Purok 7 -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorSurface" app:cardCornerRadius="12dp" app:cardElevation="1dp" app:strokeColor="@color/colorOutline" app:strokeWidth="1dp" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="07" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedBg" android:gravity="center" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 7" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hillside terrace &amp; upland boundary" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/colorOutline" android:layout_marginVertical="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👤 640 Verified Residents" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⛰️ Ridge Outpost" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Footer Governance Notice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@android:drawable/ic_menu_info_details" app:tint="@color/colorTextSecondary" android:contentDescription="Info" android:layout_marginEnd="8dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Puroks already used by residents or reports can't be renamed or removed.\nBarangay Data Governance Code § 14-A"
+                android:textSize="11sp"
+                android:textColor="@color/colorTextSecondary"
+                android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

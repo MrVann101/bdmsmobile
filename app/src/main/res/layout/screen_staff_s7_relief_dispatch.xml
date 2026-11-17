@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="40dp">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Go back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Relief &amp; Tanod Dispatch" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ref: EMERG-044 • Purok 3" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_more" app:tint="@color/colorTextPrimary" android:contentDescription="More" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Target Household Banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/statusRejectedBg"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/statusRejectedText"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="EMERG-044 • Baha / Flash Flood" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔴 Creek Cresting" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elena Ramos Household"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="House #42-B, Purok 3 Riverside Alleyway"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Metric Pills -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@color/colorSurface" android:padding="10dp" android:layout_marginEnd="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4 Trapped" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 Bedridden Senior" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@color/colorSurface" android:padding="10dp" android:layout_marginStart="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="~1.2m Depth" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/statusProcessingText"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Swift Alley Current" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section 1: Patrol / Rescue Unit -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1  Patrol / Rescue Unit" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 Active Units" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+            </LinearLayout>
+
+            <!-- Team Alpha Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimaryLight"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1.5dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="● Team Alpha" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recommended" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/statusCompletedText" android:background="@color/statusCompletedBg" android:paddingHorizontal="8dp" android:paddingVertical="2dp" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="~4m" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tanod Ramos • Tanod Santos" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="400m away" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📡 Ch 2 FM" android:textSize="10sp" android:textColor="@color/colorTextSecondary" android:layout_marginEnd="12dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚤 Water Rescue" android:textSize="10sp" android:textColor="@color/colorTextSecondary" android:layout_marginEnd="12dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⛑ First Aid" android:textSize="10sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Team Charlie Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/colorOutline"
+                app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="○ Team Charlie" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Standby" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary" android:background="@color/colorBackground" android:paddingHorizontal="8dp" android:paddingVertical="2dp" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="~12m" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tanod Dizon • Tanod Morales" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.2 km away" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Section 2: Transport & Rescue Gear -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="2  Transport &amp; Rescue Gear" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 Required Items" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+            </LinearLayout>
+
+            <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="Rescue Boat 01 (Fiberglass) — Sub-station 2\n6-Pax Outboard • 100% Fuel Tank • 6 Life Vests included" android:textSize="12sp" android:textColor="@color/colorTextPrimary" android:layout_marginBottom="8dp"/>
+            <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="Spine Board &amp; Foldable Stretcher [Vulnerable Req.]\nEssential for 1 bedridden resident (Elena Ramos)" android:textSize="12sp" android:textColor="@color/colorTextPrimary" android:layout_marginBottom="8dp"/>
+            <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="Floating Ropes &amp; Life Rings (50m High-Tension)\nCreek runoff protocol &amp; current anchorage" android:textSize="12sp" android:textColor="@color/colorTextPrimary"/>
+        </LinearLayout>
+
+        <!-- Section 3: Relief Goods & Provisions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="3  Relief Goods &amp; Provisions" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="142 Packs in Stock" android:textSize="11sp" android:textColor="@color/colorPrimary" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Item 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@color/colorBackground" android:padding="10dp" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Family Food Packs (DSWD)" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5kg Rice, Canned Goods, Noodles" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                </LinearLayout>
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="-" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:background="@color/colorSurface"/>
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="4" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="+" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:background="@color/colorPrimary" android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@color/colorBackground" android:padding="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Potable Mineral Water (6L)" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sealed sanitary jugs" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                </LinearLayout>
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="-" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:background="@color/colorSurface"/>
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="4" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="+" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:background="@color/colorPrimary" android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Authorize & Dispatch Unit Now Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAuthorizeDispatch"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="⚡ Authorize &amp; Dispatch Unit Now"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/statusCompletedText"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🖨 Print Dispatch Manifest &amp; Gate Pass"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:backgroundTint="@color/colorSurface"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1dp"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+</ScrollView>

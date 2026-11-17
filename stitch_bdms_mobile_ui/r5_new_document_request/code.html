@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#6d7a72", "secondary-fixed-dim": "#7bd8b1", "on-surface-variant": "#3d4a42", "error-container": "#ffdad6", "on-secondary": "#ffffff", "on-tertiary-container": "#f5fff7", "on-primary-fixed-variant": "#005137", "error": "#ba1a1a", "on-background": "#1a1b23", "on-secondary-fixed": "#002115", "background": "#fbf8ff", "primary-fixed": "#85f8c4", "outline-variant": "#bccac0", "primary-container": "#00855d", "on-secondary-container": "#007353", "on-surface": "#1a1b23", "on-tertiary": "#ffffff", "surface-container-low": "#f4f2fd", "surface": "#fbf8ff", "on-error-container": "#93000a", "primary-fixed-dim": "#68dba9", "surface-container-high": "#e9e7f2", "tertiary-fixed": "#c3ecd7", "surface-bright": "#fbf8ff", "inverse-on-surface": "#f1effa", "primary": "#006948", "on-primary": "#ffffff", "tertiary-fixed-dim": "#a8cfbc", "surface-variant": "#e3e1ec", "inverse-surface": "#2f3038", "on-secondary-fixed-variant": "#00513a", "on-primary-fixed": "#002114", "secondary-fixed": "#97f5cc", "secondary-container": "#97f5cc", "surface-container-highest": "#e3e1ec", "surface-container": "#efecf8", "on-primary-container": "#f5fff7", "tertiary-container": "#577c6b", "on-error": "#ffffff", "inverse-primary": "#68dba9", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002115", "secondary": "#006c4e", "surface-dim": "#dad9e4", "surface-tint": "#006c4a", "tertiary": "#3f6353", "on-tertiary-fixed-variant": "#294e3f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-md": "0.75rem", "gutter": "1rem", "space-xs": "0.25rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem" }, "fontFamily": { "headline-sm": ["Public Sans"], "body-lg": ["Public Sans"], "label-md": ["Public Sans"], "body-md": ["Public Sans"], "body-sm": ["Public Sans"], "display-lg": ["Public Sans"], "label-lg": ["Public Sans"], "headline-md": ["Public Sans"], "headline-lg": ["Public Sans"], "label-sm": ["Public Sans"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">New Request</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Help and Requirements" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col w-full bg-surface pt-16 pb-safe"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-xl flex flex-col gap-space-lg">
+<div class="bg-secondary-container/40 rounded-xl p-space-md flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface">Citizen Portal • Barangay San Dionisio</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fill out the details below. Ready documents are processed within 24 hours upon Purok endorsement verification.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5" for="doc-type-select">
+<span>Document Type</span>
+<span class="text-error font-body-sm">*</span>
+</label>
+<div class="relative bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-primary">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<select class="w-full h-[52px] pl-11 pr-10 bg-transparent rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-low transition-colors appearance-none cursor-pointer" id="doc-type-select">
+<option selected="" value="clearance">Barangay Clearance</option>
+<option value="indigency">Certificate of Indigency</option>
+<option value="residency">Certificate of Residency</option>
+<option value="id">Barangay ID Card</option>
+<option value="business">Business Clearance (Micro/Sari-Sari)</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5" for="purpose-input">
+<span>Purpose of Request</span>
+<span class="text-error font-body-sm">*</span>
+</label>
+<div class="relative bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">work_outline</span>
+</div>
+<input class="w-full h-[52px] pl-11 pr-4 bg-transparent rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low transition-colors" id="purpose-input" placeholder="e.g., Local Employment, Scholarship, Bank Account Opening" type="text" value="Employment / Local Job Application"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant px-1">Indicate exact transaction or requesting agency requirement.</p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Delivery Method</span>
+<div aria-label="Delivery Method" class="flex flex-col gap-2" role="radiogroup">
+<label class="delivery-option relative flex items-center justify-between p-3.5 rounded-lg bg-surface-container-lowest shadow-sm cursor-pointer transition-all active:scale-[0.99]">
+<div class="flex items-center gap-3">
+<input checked="" class="sr-only peer" name="delivery_method" type="radio" value="pickup"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center peer-checked:bg-primary transition-colors">
+<div class="w-2 h-2 rounded-full bg-surface"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Pickup at Barangay Hall</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Express Window 2 • Mon-Fri 8:00 AM - 5:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">storefront</span>
+</label>
+<label class="delivery-option relative flex items-center justify-between p-3.5 rounded-lg bg-surface-container-lowest shadow-sm cursor-pointer transition-all active:scale-[0.99]">
+<div class="flex items-center gap-3">
+<input class="sr-only peer" name="delivery_method" type="radio" value="digital"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center peer-checked:bg-primary transition-colors">
+<div class="w-2 h-2 rounded-full bg-surface"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Digital Copy via Email</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Official PDF with secure QR verification seal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">alternate_email</span>
+</label>
+<label class="delivery-option relative flex items-center justify-between p-3.5 rounded-lg bg-surface-container-lowest shadow-sm cursor-pointer transition-all active:scale-[0.99]">
+<div class="flex items-center gap-3">
+<input class="sr-only peer" name="delivery_method" type="radio" value="both"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center peer-checked:bg-primary transition-colors">
+<div class="w-2 h-2 rounded-full bg-surface"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Both (Physical &amp; Digital)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant downloadable copy plus physical clearance claim</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">all_inbox</span>
+</label>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Standard Document Fee</span>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary font-bold">₱50.00</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 pt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">payments</span>
+<p class="font-label-sm text-label-sm">Payable upon claiming at treasury desk or via GCash/Maya counter.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-error text-[18px]">assignment_turned_in</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Purok Clearance (Required)</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex-shrink-0">
+          Required
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Under <span class="font-medium text-on-surface">Barangay Ordinance No. 04-2023</span>, all document issuances require prior Purok Leader clearance endorsement.
+      </p>
+<div class="relative rounded-xl bg-surface-container-low p-space-md flex flex-col items-center justify-center text-center cursor-pointer transition-colors active:bg-surface-container-high" id="upload-zone">
+<input accept="image/jpeg,image/png,application/pdf" class="hidden" id="purok-file-input" type="file"/>
+<div class="flex flex-col items-center gap-2" id="upload-idle-state">
+<div class="w-12 h-12 rounded-full bg-secondary-container/80 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">add_a_photo</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<p class="font-label-lg text-label-lg text-on-surface">Tap to upload photo or scan of Purok Clearance</p>
+<p class="font-label-sm text-label-sm text-outline">Supports JPG, PNG, or PDF (Max 10MB)</p>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Camera
+            </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_library</span> Gallery
+            </span>
+</div>
+</div>
+<div class="hidden flex-col items-center gap-2 w-full" id="upload-success-state">
+<div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div class="flex flex-col items-center">
+<p class="font-label-lg text-label-lg text-on-surface font-semibold truncate max-w-[240px]" id="uploaded-file-name">Purok-Certificate-Signed.jpg</p>
+<p class="font-label-sm text-label-sm text-primary font-medium">Ready for endorsement verification</p>
+</div>
+<button class="mt-1 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high" id="replace-file-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">sync</span> Replace file
+          </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex flex-col gap-2" id="submission-container">
+<button class="w-full h-12 rounded-lg bg-surface-container-highest text-outline font-label-lg text-label-lg flex items-center justify-center gap-2 cursor-not-allowed shadow-none transition-all" disabled="" id="submit-request-btn" type="button">
+<span>Submit Request</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="font-label-sm text-label-sm text-error text-center flex items-center justify-center gap-1" id="submit-hint">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Attach Purok Clearance above to activate submission</span>
+</p>
+</div>
+<div class="flex justify-center">
+<button class="py-2 px-4 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+          Save Draft
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const uploadZone = document.getElementById('upload-zone');
+    const fileInput = document.getElementById('purok-file-input');
+    const idleState = document.getElementById('upload-idle-state');
+    const successState = document.getElementById('upload-success-state');
+    const fileNameDisplay = document.getElementById('uploaded-file-name');
+    const replaceBtn = document.getElementById('replace-file-btn');
+    const submitBtn = document.getElementById('submit-request-btn');
+    const submitHint = document.getElementById('submit-hint');
+
+    function activateSubmission(fileName) {
+      idleState.classList.add('hidden');
+      successState.classList.remove('hidden');
+      successState.classList.add('flex');
+      fileNameDisplay.textContent = fileName || 'Purok_Clearance_2025.pdf';
+
+      submitBtn.removeAttribute('disabled');
+      submitBtn.classList.remove('bg-surface-container-highest', 'text-outline', 'cursor-not-allowed', 'shadow-none');
+      submitBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-md', 'active:bg-on-primary-fixed-variant');
+      
+      submitHint.innerHTML = '<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span><span class="text-primary">Requirement validated. You may proceed.</span>';
+    }
+
+    uploadZone.addEventListener('click', (e) => {
+      if (e.target !== replaceBtn && !replaceBtn.contains(e.target)) {
+        fileInput.click();
+      }
+    });
+
+    replaceBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files && fileInput.files[0]) {
+        activateSubmission(fileInput.files[0].name);
+      }
+    });
+
+    const deliveryLabels = document.querySelectorAll('.delivery-option');
+    deliveryLabels.forEach((label) => {
+      label.addEventListener('click', () => {
+        deliveryLabels.forEach((l) => {
+          l.classList.remove('bg-surface-container-low');
+          l.classList.add('bg-surface-container-lowest');
+        });
+        label.classList.remove('bg-surface-container-lowest');
+        label.classList.add('bg-surface-container-low');
+      });
+    });
+
+    submitBtn.addEventListener('click', () => {
+      if (!submitBtn.hasAttribute('disabled')) {
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Submitting to Barangay Desk...</span>';
+        setTimeout(() => {
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Submitted Successfully</span>';
+          submitBtn.classList.remove('bg-primary');
+          submitBtn.classList.add('bg-secondary');
+        }, 1200);
+      }
+    });
+  })();
+</script></main></body></html>

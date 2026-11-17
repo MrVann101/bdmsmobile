@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="60dp">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Go back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emergency Response" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ref: EMERG-044" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BDRRMC Ops"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/statusRejectedText"
+                android:background="@color/statusRejectedBg"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_more" app:tint="@color/colorTextPrimary" android:contentDescription="More" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Priority 1 Immediate Life Safety Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/statusRejectedText"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@android:drawable/ic_menu_report_image" app:tint="@color/white" android:contentDescription="Alert" android:layout_marginEnd="10dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PRIORITY 1 • IMMEDIATE LIFE SAFETY"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High Surge"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/statusRejectedText"
+                android:background="@color/colorSurface"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+        </LinearLayout>
+
+        <!-- Incident Title & Meta Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="EMERG-044" android:fontFamily="monospace" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Unverified / Incoming" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusPendingText" android:background="@color/statusPendingBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flood • Flash Flood Trapping (Baha)"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🕒 Reported 18m ago • Oct 23, 2024 10:14 AM"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorTextSecondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Reporter Contact Card (Elena Ramos) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Elena Ramos " android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/statusCompletedText"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BIO-44912 • Head of Household" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Zone A Alert" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/statusRejectedText" android:background="@color/statusRejectedBg" android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                </LinearLayout>
+
+                <!-- Action buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="📞 +63 917 554 9021"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorPrimary"
+                        app:backgroundTint="@color/colorPrimaryLight"
+                        app:cornerRadius="6dp"
+                        android:layout_marginEnd="4dp"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="💬 Direct SMS"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorTextPrimary"
+                        app:backgroundTint="@color/colorBackground"
+                        app:cornerRadius="6dp"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📍 Purok 3 Riverside, Near Creek Walkway" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:layout_marginBottom="2dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="House #42-B, Interior alley (Purok 3 Flood Hazard Zone A)" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="12dp"/>
+
+                <!-- Vulnerability Box -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/statusRejectedBg"
+                    android:padding="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚠ 4 Persons Trapped (High Vulnerability)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/statusRejectedText"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4 Senior Citizens • 1 bedridden requires two-person lift assist" android:textSize="11sp" android:textColor="@color/colorTextSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Field Assessment & Log -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Field Assessment &amp; Log" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CREEK RUNOFF" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/colorTextSecondary"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Critical Resource Requirements:" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:layout_marginBottom="6dp"/>
+
+                <!-- Requirement Chips -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Evacuation (Active)" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedText" android:paddingHorizontal="8dp" android:paddingVertical="4dp" android:layout_marginEnd="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Rescue Boat (Active)" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedText" android:paddingHorizontal="8dp" android:paddingVertical="4dp" android:layout_marginEnd="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Medical (Active)" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/badge_background" android:backgroundTint="@color/statusCompletedText" android:paddingHorizontal="8dp" android:paddingVertical="4dp"/>
+                </LinearLayout>
+
+                <!-- Transcript -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorBackground"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎙 Citizen Transcript / Note • R11 Relay" android:textSize="11sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="“Floodwater waist-deep and rising quickly from heavy creek runoff. 4 senior citizens stranded on elevated ground floor; 1 wheelchair-bound grandmother unable to climb to loft. Creek spillway overflowing.”" android:textSize="12sp" android:textColor="@color/colorTextSecondary" android:lineSpacingMultiplier="1.2"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Visual Evidence Attachment" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary" android:layout_marginBottom="6dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:scaleType="centerCrop"
+                    android:background="@color/colorBackground"
+                    android:contentDescription="Evidence"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Sensor & Coordinates row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@color/colorBackground" android:padding="10dp" android:layout_marginEnd="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💧 Tullahan Creek Sensor" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2.1m" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="↗ +0.4m in last 30m" android:textSize="10sp" android:textColor="@color/statusRejectedText" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@color/colorBackground" android:padding="10dp" android:layout_marginStart="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐 Geo-Coordinates" android:textSize="11sp" android:textColor="@color/colorTextSecondary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14.4981° N" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="120.9924° E" android:textSize="12sp" android:textColor="@color/colorTextSecondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Sequential Workflow Operations -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sequential Workflow Operations"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginBottom="4dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 1 must be authorized by Ops Commander before deployment clearance can be granted."
+                    android:textSize="12sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="✓ Verify Report via Desk/Tanod"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/statusCompletedText"
+                    app:cornerRadius="8dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDispatchRelief"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="🔒 Dispatch Relief &amp; Rescue"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextSecondary"
+                    app:backgroundTint="@color/colorBackground"
+                    app:cornerRadius="8dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ℹ Requires report verification before dispatch can be initiated."
+                    android:textSize="11sp"
+                    android:textColor="@color/colorTextSecondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Footer Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refer: BFP / Red Cross" android:textSize="12sp" android:textColor="@color/colorPrimary" android:textStyle="bold" android:layout_marginEnd="24dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flag False Alarm" android:textSize="12sp" android:textColor="@color/statusRejectedText" android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
